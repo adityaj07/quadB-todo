@@ -15,14 +15,15 @@ function TodoForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="flex gap-4">
       <input
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
         placeholder="What needs to be done?"
+        className="transparent outline-none border-none px-2 py-3 border border-zinc-400/50 rounded-md"
       />
-      <button type="submit">Add</button>
+      <button type="submit" className="p-2 bg-white hover:bg-gray-200/90 rounded-md w-[5rem] shadow transition-colors duration-200 font-bold">Add</button>
     </form>
   );
 }
