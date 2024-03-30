@@ -1,13 +1,16 @@
-import { useState } from "react";
-import "./App.css";
+import TodoForm from './components/TodoForm';
+import TodoList from './components/TodoList';
 
 
 function App() {
 
+
   return (
-    <>
-      <h1 className="text-7xl font-black text-orange-600">Jai Shri Ram</h1>
-    </>
+    <div>
+      <h1>Todo App</h1>
+      <TodoForm />
+      <TodoList />
+    </div>
   );
 }
 
