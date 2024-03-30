@@ -12,7 +12,7 @@ const TodoItem = ({ todo }) => {
   const dispatch = useDispatch();
 
   const handleToggle = () => {
-    dispatch(toggleTodo({ id: todo.id }));
+    dispatch(toggleTodo({type:"todos/toggleTodo", id: todo.id }));
   };
 
   const handleChange = (e) => {
@@ -35,7 +35,10 @@ const TodoItem = ({ todo }) => {
   };
 
   return (
-    <li onDoubleClick={handleDoubleClick}>
+    <li
+      onDoubleClick={handleDoubleClick}
+      className={todo.completed ? "line-through" : ""}
+    >
       <input type="checkbox" onChange={handleToggle} checked={todo.completed} />
       {isEditable ? (
         <input

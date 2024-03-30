@@ -33,9 +33,15 @@ export const todoSlice = createSlice({
       localStorage.setItem("todos", JSON.stringify(newState));
       return newState;
     },
+    markAllComplete: (state) => {
+      state.forEach((todo) => {
+        todo.completed = true;
+      });
+      localStorage.setItem("todos", JSON.stringify(state));
+    },
   },
 });
 
-export const { addTodo, toggleTodo, updateTodo, deleteTodo } =
+export const { addTodo, toggleTodo, updateTodo, deleteTodo, markAllComplete } =
   todoSlice.actions;
 export default todoSlice.reducer;
