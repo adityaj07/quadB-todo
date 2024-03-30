@@ -36,8 +36,9 @@ const TodoItem = ({ todo }) => {
   };
 
   return (
+    // The list li element which renders a todo
     <li
-      onDoubleClick={handleDoubleClick}
+      onDoubleClick={handleDoubleClick} // to make todo editable
       className={` w-full bg-white/80 flex justify-between items-center gap-4 px-4 py-3 rounded-lg`}
     >
       <div

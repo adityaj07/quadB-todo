@@ -16,19 +16,19 @@ function TodoList() {
 
   return (
     <div className="w-[80%] md:w-[50%] p-2">
+      {/* The list which lists all the todos */}
       <ul className="flex flex-col gap-3 my-3 ">
         {todos.map((todo) => (
           <TodoItem key={todo.id} todo={todo} />
         ))}
       </ul>
-      {todos && (
-        <button
-          onClick={handleMarkAllComplete}
-          className="p-3 bg-[#202020] text-white hover:bg-gray-800/90 rounded-md w-full shadow transition-colors duration-200"
-        >
-          Mark all as complete
-        </button>
-      )}
+      {/* Button to mark all todos as complete */}
+      <button
+        onClick={handleMarkAllComplete}
+        className="p-3 bg-[#202020] text-white hover:bg-gray-800/90 rounded-md w-full shadow transition-colors duration-200"
+      >
+        Mark all as complete
+      </button>
     </div>
   );
 }
